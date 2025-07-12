@@ -1,3 +1,5 @@
+import React from "react";
+
 import { FaSpinner } from "react-icons/fa";   // any icon works
 import "./loader.css";
 

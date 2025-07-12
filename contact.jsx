@@ -1,3 +1,4 @@
+import React from "react";
 
 import "./contact.css";
 import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
