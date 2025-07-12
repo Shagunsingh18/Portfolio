@@ -111,7 +111,7 @@
   text-align: center;
   margin-right: 130px;
   margin-top: 50px;
-  background-image: url('./profile1.jpg');
+  background-image: url('/profile1.jpg');
   z-index: 1;               
   border: 2px solid rgb(255, 255, 255);
   border-radius: 5px;
