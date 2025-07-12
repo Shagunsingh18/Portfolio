@@ -77,7 +77,6 @@ color: rgb(59, 247, 247);
   padding: 30px 10px 30px 0;
   backdrop-filter: blur(10px);
   margin-right: 50px;
-  /* border: 3px solid black; */
 }
 
 /* Box Styles */
@@ -181,22 +180,27 @@ color: rgb(59, 247, 247);
   margin-top: 0; 
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 60px 16px;
-    gap: 32px;
+@media (max-width: 600px) {                 
+  .home {                                    
+    flex-direction: column;                 
+    align-items: center;                    
+    justify-content: flex-start;            
+    min-height: 100vh;                      
+    height: auto;                           
+    padding: 16px;                          
   }
-  .left-space {
-    padding: 24px 16px;
+
+  .home .left,                              
+  .home .right {                            
+    width: 100%;                            
+    flex: unset;                            
+    margin: 0 0 24px 0;                     
   }
-  .icon-grid {
-    gap: 28px;
-    max-width: 100%;
-    justify-content: center;    /* center grid when very narrow */
-  }
-  .icon-grid a,
-  .matplotlib-icon a {
-    font-size: 38px;
+.home .left {
+    height: 40vh;        /* pick the size you like (e.g., 250‑300 px) */
+    max-height: 320px;   /* safety cap so it never grows too tall     */
+    overflow: hidden;    /* hides any overflow content                */
   }
 }
+
 

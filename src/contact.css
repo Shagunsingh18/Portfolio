@@ -12,9 +12,7 @@
   overflow: hidden; /* Prevent scrollbars */
   justify-content: center;
   overflow: hidden; /* Prevent scrollbars due to video overflow */
-  /* background-image: url('./laptop.jpg');
-  background-size: cover;
-  background-repeat: no-repeat; */
+  
 }
 
 .contact-main::before {

@@ -20,7 +20,7 @@ function Home() {
        <source src='/home-bg.mp4' type="video/mp4"/>
       </motion.video>
 
-           <div class="overlay"></div>
+           <div className="overlay"></div>
       
       <motion.section
         className="home"
