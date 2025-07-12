@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import './App.css';
-import Navbar from './components/navbar.jsx';
-import Home from './components/home.jsx';
-import Intro from './components/intro.jsx';
-import Project from './components/project.jsx';
-import Skill from './components/skill.jsx';
-import Contact from './components/contact.jsx';
-import Loader from './components/loader.jsx';
+import Navbar from "./navbar.jsx";
+import Home from './home.jsx';
+import Intro from './intro.jsx';
+import Project from './project.jsx';
+import Skill from './skill.jsx';
+import Contact from './contact.jsx';
+import Loader from './loader.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true);
