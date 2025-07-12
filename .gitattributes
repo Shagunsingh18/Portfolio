@@ -1,0 +1,13 @@
+# Use Unix-style LF endings
+* text=auto eol=lf
+
+# Ensure shell scripts use LF (important for Vercel and Linux)
+*.sh eol=lf
+
+# Preserve executable bits
+*.sh text eol=lf
+node_modules/.bin/* -text
+
+# Optional: make Markdown and JSON use LF for consistency
+*.md eol=lf
+*.json eol=lf
