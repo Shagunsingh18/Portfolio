@@ -180,3 +180,23 @@ color: rgb(59, 247, 247);
   background-color: white;
   margin-top: 0; 
 }
+
+@media (max-width: 600px) {
+  .main {
+    padding: 60px 16px;
+    gap: 32px;
+  }
+  .left-space {
+    padding: 24px 16px;
+  }
+  .icon-grid {
+    gap: 28px;
+    max-width: 100%;
+    justify-content: center;    /* center grid when very narrow */
+  }
+  .icon-grid a,
+  .matplotlib-icon a {
+    font-size: 38px;
+  }
+}
+
