@@ -185,7 +185,7 @@ color: rgb(59, 247, 247);
     flex-direction: column;                 
     align-items: center;                    
     justify-content: flex-start;            
-    min-height: 100vh;                      
+    min-height: 90vh;                      
     height: auto;                           
     padding: 16px;                          
   }
@@ -197,8 +197,8 @@ color: rgb(59, 247, 247);
     margin: 0 0 24px 0;                     
   }
 .home .left {
-    height: 40vh;        /* pick the size you like (e.g., 250‑300 px) */
-    max-height: 320px;   /* safety cap so it never grows too tall     */
+    height: 30vh;        /* pick the size you like (e.g., 250‑300 px) */
+    max-height: 150px;   /* safety cap so it never grows too tall     */
     overflow: hidden;    /* hides any overflow content                */
   }
 }
