@@ -14,7 +14,7 @@ function Contact() {
   return (
     <div className="contact-main">
       <video autoPlay loop muted playsInline className="bg1-video">
-        <source src="/contact.mp4" type="video/mp4" />
+        <source src="/Contact-bg.mp4" type="video/mp4" />
       </video>
 
       <div className="contact-div">Contact</div>

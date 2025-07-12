@@ -17,7 +17,7 @@ function Home() {
         animate={{ opacity: 1 }}               
         transition={{ duration: 1.2, delay: 2 }}
       >
-       <source src='/tech.mp4' type="video/mp4"/>
+       <source src='/home-bg.mp4' type="video/mp4"/>
       </motion.video>
 
            <div class="overlay"></div>
