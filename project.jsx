@@ -29,7 +29,7 @@ function Project() {
           transition={{ duration: 1 }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <img src="./ss.png" alt="project" className="right-img" />
+          <img src="./project.png" alt="project" className="right-img" />
         </motion.div>
 
         {/* Text box slides in from left */}
