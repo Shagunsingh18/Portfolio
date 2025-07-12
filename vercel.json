@@ -1,1 +1,8 @@
-{ "rewrites": [ { "source": "/(.*)", "destination": "/" } ] } 
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "handle": "filesystem" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
