@@ -1,5 +1,4 @@
 
-
 #preloader {
   position: fixed;
   inset: 0;
@@ -17,7 +16,7 @@
 .loader-icon {
   font-size: 40px;        
   color: rgb(235, 240, 240);           
-  animation: spin 1s linear infinite;
+  animation: spin 1s linear ;
 }
 
 
