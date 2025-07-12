@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding-right: 80px; 
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+#home,
+#intro,
+#project,
+#skill,
+#contact {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
