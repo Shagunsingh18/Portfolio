@@ -1,0 +1,39 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-bottom: 20px;
+  height: 100vh; 
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 12px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 10px 0 0 10px;
+  z-index: 9999;
+}
+
+
+.navbar a {
+  text-decoration: none;
+  color: #e4e7e8;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 4px 7px;
+  background-color: rgb(30, 29, 29);
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+  border: 1px solid #1ad605;
+}
+
+.navbar a:hover {
+  background-color: #0077b6;
+  color: white;
+}
+
+
+
+

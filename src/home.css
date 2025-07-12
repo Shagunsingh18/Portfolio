@@ -1,0 +1,228 @@
+.home {
+  height: 92vh;
+  width: 100vw;
+  position: relative;            
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+  color: white;
+  box-sizing: border-box;
+  animation: homeFadeSlide 4s
+            cubic-bezier(0.22, 1, 0.36, 1)
+            forwards;  
+            
+}
+
+@keyframes homeFadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  overflow: hidden;
+  inset: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);  
+  backdrop-filter: none;           
+  z-index: 2;                      
+  pointer-events: none;            
+}
+
+
+.text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 20px;
+  z-index: 1;                   
+}
+
+.dot {
+  color: #14e105;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.text h1, .text h2, .text h3 {
+  margin: 5px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textFadeUp 4s ease forwards;
+}
+
+.text button{
+  all:unset;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: btnFadeUp 0.8s ease forwards;
+  animation-delay: 4s;  
+}
+
+.text button:hover{
+  color: #14e105;
+}
+.text button >a{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;                  
+  padding: 10px 24px;
+  border: 2px solid #0cfa03; 
+  border-radius: 40px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ece5e5;
+  background: transparent;
+  text-decoration: none;
+}
+
+.text h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.right {
+  width: 350px;
+  height: 450px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-right: 130px;
+  margin-top: 50px;
+  background-image: url('./profile1.jpg');
+  z-index: 1;               
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-size: cover;          
+}
+
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .right {
+    margin-top: 30px;
+    width: 90%;
+    height: auto;
+  }
+
+  .text h3 {
+    font-size: 24px;
+  }
+}
+
+.line-divider {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-top: 0;
+}
+
+.intro-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.short-line {
+  width: 30px;
+  height: 2px;
+  background-color: rgb(43, 224, 2);
+}
+
+.text h1:nth-child(1) { animation-delay: 3s; }
+.text h3:nth-of-type(1) { animation-delay: 3.30s; }
+.text h3:nth-of-type(2) { animation-delay: 3.45s; }
+.text h3:nth-of-type(3) { animation-delay: 3.60s; }
+
+@keyframes textFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  
+  .home {
+    flex-direction: column;      
+    justify-content: flex-start; 
+     padding: 32px 16px;  
+    gap: 24px;                   
+    height: auto;                
+  }
+
+  
+  .text {
+    max-width: 100%;
+    align-items: center;        
+    text-align: center;
+  }
+  .text h1   { font-size: 1.9rem; }
+  .text h3   { font-size: 1.1rem; }
+
+  
+  .home .right {              
+    width: 90vw;
+    max-width: 320px;
+    height: 60vw;              
+    aspect-ratio: 3 / 4;
+    margin: 0 auto 16px;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  
+  .short-line { width: 24px; }
+
+  
+  .text h1:nth-child(1) { animation-delay: 1.2s; }
+  .text h3:nth-of-type(1) { animation-delay: 1.4s; }
+  .text h3:nth-of-type(2) { animation-delay: 1.6s; }
+  .text h3:nth-of-type(3) { animation-delay: 1.8s; }
+}
+
+
+@media (max-width: 900px) {
+  .right {
+    width: 90vw;
+    max-width: 320px;
+    aspect-ratio: 3 / 4;      
+    margin: 0 auto 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@keyframes btnFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
