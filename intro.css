@@ -1,0 +1,118 @@
+/* Root container */
+.intro {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  padding: 60px ;
+}
+
+/* Frame to hold all content blocks */
+.frame {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 32px 50px;
+  border-radius: 20px;
+  max-width: 1100px;
+   min-height: 60vh;
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  color: rgb(251, 248, 248);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  background-image: url('./bird.jpg');
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+margin: 50px 50px 10px 50px;
+border: 2px solid rgb(9, 202, 9);
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.3); 
+  z-index: -1; 
+  filter: brightness(0.5); 
+}
+
+.frame-inner {
+  display: flex;        
+  flex-direction: row;  
+  gap: 32px;            
+}
+
+.frame-inner >div{
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 20px;
+  box-shadow: 0 4px 16px rgb(16, 88, 127);
+}
+
+/* Optional styling for tag quote */
+.tag {
+  font-style: italic;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(234, 228, 228);
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.tag p:hover{
+  filter: drop-shadow(0 0 5px #03f61b);
+}
+
+
+.line-divider {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-top: 0; 
+}
+
+
+
+  
+@media (max-width: 600px) {
+  
+  .intro {
+    padding: 32px 16px;         
+    height: auto;               
+  }
+
+  
+  .frame {
+    flex-direction: column;     
+    gap: 24px;
+    min-height: auto;           
+    margin: 24px 0 8px;         
+    padding: 24px 24px;         
+    max-width: 95%;             
+  }
+
+  .frame-inner {
+    flex-direction: column;     
+    gap: 20px;
+  }
+  .frame-inner > div {
+    font-size: 1rem;            
+    padding: 16px;
+  }
+
+  .tag {
+    font-size: 1.1rem;          
+    margin-top: 12px;
+    padding: 0 12px;            
+  }
+}
