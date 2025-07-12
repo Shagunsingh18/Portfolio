@@ -1,26 +1,29 @@
-// LoaderWrapper.jsx
+
 import React, { useEffect, useState } from "react";
-import Loader from "./loader.jsx";           // ← your existing component
+import Loader from "./loader.jsx";
 
 export default function LoaderWrapper({ children }) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    /** 1️⃣  Hide as soon as DOM is parsed (fast on mobile) */
+    // 1️⃣  If DOM is already parsed, hide immediately
+    if (document.readyState === "interactive" || document.readyState === "complete") {
+      setReady(true);
+      return;             // no listener needed
+    }
+
+    // 2️⃣  Otherwise, wait for DOMContentLoaded
     const done = () => setReady(true);
     document.addEventListener("DOMContentLoaded", done);
 
-    /** 2️⃣  Safety timeout: force‑hide after 5 s */
+    // 3️⃣  Safety timeout: hide after 5 s regardless
     const t = setTimeout(done, 5000);
 
-    /** Cleanup */
     return () => {
       document.removeEventListener("DOMContentLoaded", done);
       clearTimeout(t);
     };
   }, []);
 
-  /** Show loader until we're ready */
-  if (!ready) return <Loader />;
-  return children;
+  return ready ? children : <Loader />;
 }
